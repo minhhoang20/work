@@ -1,0 +1,12 @@
+﻿@model ProductTrack.Models.Member
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.FirstName @Model.LastName</h2>
+@foreach (var entry in @Model.WorkEntries())
+{
+    <h3>@entry.Activity: @entry.TimeSpent</h3>
+}

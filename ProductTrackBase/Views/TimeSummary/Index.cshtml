@@ -1,0 +1,13 @@
+﻿@model List<ProductTrack.Models.Member>
+
+@{
+    ViewBag.Title = "TimeSummay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var member in @Model)
+{
+    <h2>
+        <li>@Html.ActionLink(@member.FirstName + " " + @member.LastName, "Member", "TimeSummary", new { member_user_id = @member.MemberUserId }, null)</li>
+    </h2>
+}
